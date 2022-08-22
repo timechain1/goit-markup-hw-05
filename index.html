@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="uk">
+<html lang="ru">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Студія</title>
+    <title>Студия</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -19,7 +19,7 @@
   </head>
 
   <body>
-    <!-- Head -->
+    <!-- Шапка -->
     <header class="header">
       <div class="container nav-flex">
         <nav class="header-nav">
@@ -29,16 +29,16 @@
           <ul class="header-nav-list list">
             <li class="header-nav-item">
               <a class="header-nav-link link current" href="./index.html"
-                >Студія</a
+                >Студия</a
               >
             </li>
             <li class="header-nav-item">
               <a class="header-nav-link link" href="./portfolio.html"
-                >Портфоліо</a
+                >Портфолио</a
               >
             </li>
             <li class="header-nav-item">
-              <a class="header-nav-link link" href="">Контакти</a>
+              <a class="header-nav-link link" href="">Контакты</a>
             </li>
           </ul>
         </nav>
@@ -62,17 +62,18 @@
         </ul>
       </div>
     </header>
-    <!-- Main content -->
+    <!-- Основной контент -->
     <main>
-      <!-- Hero -->
+      <!-- Герой -->
       <section class="hero">
-        <h1 class="hero-title">Ефективні рішення для вашого бізнесу</h1>
-        <button class="hero-btn" type="button" data-modal-open>Замовити послугу</button>
+        <h1 class="hero-title">Эффективные решения для вашего бизнеса</h1>
+        <button class="hero-btn" type="button" data-modal-open>Заказать услугу</button>
       </section>
-      <!-- List of advantages -->
+      <!-- Список преимуществ -->
       <section class="features-section">
         <div class="container">
-          <h2 hidden>Переваги</h2>
+          <!-- h2 Преимущества спрятать в css правильно -->
+          <h2 class="visually-hidden">Преимущества</h2>
           <ul class="features-list list">
             <li class="features-item">
               <div class="features-icon-fon">
@@ -81,9 +82,10 @@
                 </svg>
               </div>
 
-              <h3 class="features-title">УВАГА ДО ДЕТАЛЕЙ</h3>
+              <h3 class="features-title">Внимание к деталям</h3>
               <p class="features-text">
-                Ідейні міркування, і навіть початок повсякденної роботи з формування позиції..
+                Идейные соображения, а также начало повседневной работы по
+                формированию позиции.
               </p>
             </li>
             <li class="features-item">
@@ -93,9 +95,10 @@
                 </svg>
               </div>
 
-              <h3 class="features-title">ПУНКТУАЛЬНІСТЬ</h3>
+              <h3 class="features-title">Пунктуальность</h3>
               <p class="features-text">
-                Завдання організації, особливо рамки і місце навчання кадрів тягне у себе..
+                Задача организации, в особенности же рамки и место обучения
+                кадров влечет за собой.
               </p>
             </li>
             <li class="features-item">
@@ -105,9 +108,10 @@
                 </svg>
               </div>
 
-              <h3 class="features-title">ПЛАНУВАННЯ</h3>
+              <h3 class="features-title">Планирование</h3>
               <p class="features-text">
-                Так само консультація з широким активом значною мірою зумовлює..
+                Равным образом консультация с широким активом в значительной
+                степени обуславливает.
               </p>
             </li>
             <li class="features-item">
@@ -117,47 +121,51 @@
                 </svg>
               </div>
 
-              <h3 class="features-title">СУЧАСНІ ТЕХНОЛОГІЇ</h3>
+              <h3 class="features-title">Современные технологии</h3>
               <p class="features-text">
-                Значимість цих проблем настільки очевидна, що реалізація планових завдань..
+                Значимость этих проблем настолько очевидна, что реализация
+                плановых заданий.
               </p>
             </li>
           </ul>
         </div>
       </section>
-      <!-- List of affairs -->
+      <!-- Список занятий -->
       <section class="work-section">
         <div class="container">
-          <h2 class="section-title">Чим ми займаємося</h2>
+          <h2 class="section-title">Чем мы занимаемся</h2>
           <ul class="work-list list">
             <li class="work-item">
               <img
                 src="./images/box1.jpg"
-                alt="співробітник створює програму"
+                alt="сотрудник создает программу"
                 width="370"
                 height="294"
               />
+              <p class="work-text">Десктопные приложения</p>
             </li>
             <li class="work-item">
               <img
                 src="./images/box2.jpg"
-                alt="співробітник створює мобільний додаток"
+                alt="сотрудник создает мобильное приложение"
                 width="370"
                 height="294"
               />
+              <p class="work-text">Мобильные приложения</p>
             </li>
             <li class="work-item">
               <img
                 src="./images/box3.jpg"
-                alt="веб-дизайнер обирає палітру"
+                alt="веб-дизайнер выбирает палитру"
                 width="370"
                 height="294"
               />
-            </li>
+              <p class="work-text">Дизайнерские решения</p>
+            </li>            
           </ul>
         </div>
       </section>
-    <!-- Team -->
+      <!-- Команда -->
       <section class="team-section">
         <div class="container">
           <h2 class="section-title">Наша команда</h2>
@@ -165,12 +173,12 @@
             <li class="team-item">
               <img
                 src="./images/img1.jpg"
-                alt="фото Ігоря Дем'яненко"
+                alt="фото Игоря Демьяненко"
                 width="270"
                 height="260"
               />
               <div class="team-workers">
-                <h3 class="team-worker">Ігор Дем'яненко</h3>
+                <h3 class="team-worker">Игорь Демьяненко</h3>
                 <p class="team-profession" lang="en">Product Designer</p>
                 <ul class="team-social-list list">
                   <li class="team-social-item">
@@ -211,12 +219,12 @@
             <li class="team-item">
               <img
                 src="./images/img2.jpg"
-                alt="фото Ольги Репіной"
+                alt="фото Ольги Репиной"
                 width="270"
                 height="260"
               />
               <div class="team-workers">
-                <h3 class="team-worker">Ольга Рєпіна</h3>
+                <h3 class="team-worker">Ольга Репина</h3>
                 <p class="team-profession" lang="en">Frontend Developer</p>
                 <ul class="team-social-list list">
                   <li class="team-social-item">
@@ -256,12 +264,12 @@
             <li class="team-item">
               <img
                 src="./images/img3.jpg"
-                alt="фото Миколи Тарасова"
+                alt="фото Николая Тарасова"
                 width="270"
                 height="260"
               />
               <div class="team-workers">
-                <h3 class="team-worker">Микола Тарасов</h3>
+                <h3 class="team-worker">Николай Тарасов</h3>
                 <p class="team-profession" lang="en">Marketing</p>
                 <ul class="team-social-list list">
                   <li class="team-social-item">
@@ -301,12 +309,12 @@
             <li class="team-item">
               <img
                 src="./images/img4.jpg"
-                alt="фото Михайла Єрмакова"
+                alt="фото Михаила Ермакова"
                 width="270"
                 height="260"
               />
               <div class="team-workers">
-                <h3 class="team-worker">Михайло Єрмаков</h3>
+                <h3 class="team-worker">Михаил Ермаков</h3>
                 <p class="team-profession" lang="en">UI Designer</p>
                 <ul class="team-social-list list">
                   <li class="team-social-item">
@@ -346,10 +354,10 @@
           </ul>
         </div>
       </section>
-      <!-- Clients -->
+      <!-- Клиенты -->
       <section class="client-section">
         <div class="container">
-          <h2 class="client-title">Постійні клієнти</h2>
+          <h2 class="client-title">Постоянные клиенты</h2>
           <ul class="client-list list">
             <li class="client-item">
               <a class="client-link link" href="">
@@ -402,7 +410,7 @@
         </div>
       </section>
     </main>
-    <!-- Footer -->
+    <!-- Подвал -->
     <footer class="footer">
       <div class="container">
         <div class="footer-flex">
@@ -410,7 +418,7 @@
             <a class="logo link" href="./index.html"
               >Web<span class="logo-white">Studio</span>
             </a>
-            <!-- List of contacts -->
+            <!-- Список контактов -->
             <address class="footer-contact">
               <ul class="footer-contact-list list">
                 <li class="footer-contact-item">
@@ -419,7 +427,7 @@
                     href="https://goo.gl/maps/CdvJLRiEL6Q8Smko8"
                     target="_blank"
                     rel="noreferrer noopener"
-                    >м. Київ, пр-т Лесі Українки, 26</a
+                    >г.Киев, пр-т Леси Украинки, 26</a
                   >
                 </li>
                 <li class="footer-contact-item">
@@ -438,7 +446,7 @@
             </address>
           </div>
           <div class="footer-social-flex">
-            <p class="footer-social-text">приєднуйтесь</p>
+            <p class="footer-social-text">Присоединяйтесь</p>
             <ul class="footer-social-list list">
               <li class="footer-social-item">
                 <a class="footer-social-link" href="">
@@ -479,7 +487,7 @@
     <div class="backdrop is-hidden" data-modal>
       <div class="modal">
           <button type="button" class="close-btn" data-modal-close>
-            <svg class width="11" height="11">
+            <svg class= width="11" height="11">
               <use href="./images/icons.svg#icon-vector"></use>
             </svg>
           </button>
