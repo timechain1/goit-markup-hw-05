@@ -47,6 +47,8 @@
     padding-left: 15px;
     padding-right: 15px;
   }
+
+
   
   .logo {
     font-family: "Raleway", sans-serif;
@@ -75,7 +77,6 @@
     justify-content: center;
     flex-direction: column;
     margin-bottom: 30px;
-  
     background-color: var(--team-background-color);
   }
   
@@ -84,6 +85,7 @@
     font-size: 14px;
     line-height: 1.71;
     color: var(--footer-text-color);
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   }
   
   .footer-contact-link:hover,
@@ -91,7 +93,7 @@
     color: var(--accent-color);
   }
   
-  /* ------------Footer-------------- */
+  /* --`Header-- */
   
   .header {
     border-bottom: 1px solid #ececec;
@@ -123,12 +125,13 @@
     display: block;
     padding-top: 32px;
     padding-bottom: 32px;
-  
     font-weight: 500;
     font-size: 14px;
     line-height: 1.14;
     letter-spacing: 0.02em;
     color: var(--primary-text-color);
+    position: relative;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   }
   
   .header-contact-list {
@@ -146,12 +149,12 @@
     padding: 32px 0px 32px;
     color: var(--secondary-text-color);
     align-items: center;
-  
     font-weight: 500;
     font-size: 14px;
     line-height: 16px;
     letter-spacing: 0.02em;
     color: var(--secondary-text-color);
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   }
   
   .contact-icon {
@@ -169,18 +172,27 @@
   .header-nav-link.current {
     color: var(--accent-color);
   }
+
+  .header-nav-link.current::after { 
+    position: absolute;
+    display: block;
+    content: '';
+    width: 100%;
+    height: 4px;
+    border-radius: 2px;
+    bottom: -1px;
+    background-color: var(--accent-color);
+  }
   
   /* --Hero-- */
   
   .hero {
     padding-top: 200px;
     padding-bottom: 200px;
-  
     max-width: 1600px;
     min-height: 600px;
     margin-left: auto;
     margin-right: auto;
-  
     background-image: linear-gradient(
         to right,
         rgba(47, 48, 58, 0.4),
@@ -191,7 +203,6 @@
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-  
     text-align: center;
   }
   
@@ -200,7 +211,6 @@
     margin-left: auto;
     margin-right: auto;
     max-width: 696px;
-  
     font-weight: 900;
     font-size: 44px;
     line-height: 1.36;
@@ -215,10 +225,8 @@
     border-radius: 4px;
     border: 1px solid transparent;
     padding: 10px 32px;
-  
     background-color: var(--accent-color);
     color: var(--white-text-color);
-  
     font-family: "Roboto", sans-serif;
     font-weight: 700;
     font-size: 16px;
@@ -227,6 +235,8 @@
     text-align: center;
     letter-spacing: 0.06em;
     cursor: pointer;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   }
   
   .hero-btn:hover,
@@ -235,11 +245,22 @@
     color: var(--accent-color);
   }
   
-  /* ------------Advantages-------------- */
+  /* Advantages */
   
   .features-section {
     padding-top: 94px;
     padding-bottom: 94px;
+  }
+
+  .visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    border: 0;
+    clip: rect(0 0 0 0);
   }
   
   .features-list {
@@ -257,7 +278,6 @@
   
   .features-title {
     margin-bottom: 10px;
-  
     font-weight: 700;
     font-size: 14px;
     line-height: 1.14;
@@ -267,13 +287,16 @@
   .features-text {
     font-size: 14px;
     line-height: 1.71;
-  
     color: var(--secondary-text-color);
   }
   
   /* --List of activities-- */
   .work-section {
     padding-bottom: 94px;
+  }
+
+  .section-title {
+    margin-bottom: 50px;
   }
   
   .work-list {
@@ -282,6 +305,21 @@
   
   .work-item:not(:last-child) {
     margin-right: 30px;
+  }
+
+  .work-text {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 27px 0px;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 1.14;
+    text-align: center;
+    text-transform: uppercase;
+    color: var(--white-text-color);
+    background-color: rgba(47, 48, 58, 0.8);;
   }
   
   
@@ -341,11 +379,14 @@
   }
   
   .team-social-link {
+    display: block;
     width: 44px;
     height: 44px;
-    display: block;
     border-radius: 50%;
     color: #afb1b8;
+    background-color: #ffffff;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+      color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   
   }
   
@@ -369,7 +410,6 @@
   
   .client-title {
     margin-bottom: 50px;
-  
     font-weight: 700;
     font-size: 36px;
     line-height: 1.17;
@@ -388,6 +428,8 @@
   .client-item {
     width: 170px;
     height: 90px;
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   }
   
   .client-item:not(:last-child) {
@@ -402,6 +444,8 @@
     color: #afb1b8;
     background-color: #fff;
     padding: 16px 32px;
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   }
   
   .client-link:hover,
@@ -471,6 +515,8 @@
     border-radius: 50%;
     color: #ffffff;
     background-color: #ffffff10;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   }
   
   .footer-social-link:hover,
@@ -499,6 +545,11 @@
   .footer-contact-item {
     margin-top: 9px;
   }
+
+  .footer-contact-link:hover,
+  .footer-contact-link:focus {
+  color: var(--accent-color);
+}
   
   /* Portfolio */
   
@@ -516,6 +567,39 @@
   .portfolio-btn-item:not(:last-child) {
     margin-right: 8px;
   }
+
+  .portfolio-item:hover .portfolio-overlay {
+    transform: translateY(0);
+  }
+
+  .portfolio-description {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .portfolio-overlay {
+    position: absolute;
+    display: inline-block;
+    content: '';
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(33, 150, 243, 0.9);
+    transform: translateY(100%);
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  
+  }
+
+  .portfolio-description-text {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 63px 24px;
+    font-size: 18px;
+    line-height: 1.56;
+    color: var(--white-text-color);
+  }
   
   .portfolio-btn {
     display: inline-block;
@@ -523,7 +607,6 @@
     border-radius: 4px;
     border: 1px solid transparent;
     padding: 6px 22px;
-  
     font-family: "Roboto", sans-serif;
     font-weight: 500;
     font-size: 16px;
@@ -533,7 +616,11 @@
     background-color: var(--team-background-color);
     color: var(--primary-text-color);
     cursor: pointer;
-  }
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+  
   
   .portfolio-btn:hover,
   .portfolio-btn:focus {
@@ -574,8 +661,56 @@
   
   .portfolio-list-text {
     margin-top: 4px;
-  
     font-size: 16px;
     line-height: 1.87;
     color: var(--secondary-text-color);
+  }
+
+  /* Modal */
+  .backdrop {
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.2);;
+    top: 0;
+    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  .backdrop.is-hidden {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+  }
+  
+  .backdrop.is-hidden .modal {
+    transform: scale(2);
+  }
+  
+  .modal {
+    width: 528px;
+    min-height: 581px;
+    background-color: #ffffff;
+    
+    position: relative;
+    transform: scale(1);
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  .close-btn {
+    position: absolute;
+  
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  
+    right: 8px;
+    top: 8px;
+    background-color: transparent;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    border: 1px solid #000000;
   }
