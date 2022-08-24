@@ -18,6 +18,8 @@ body {
   color: var(--primary-text-color);
 }
 
+img { display: block; }
+
 /* delete points of lists */
 .list {
   list-style: none;
